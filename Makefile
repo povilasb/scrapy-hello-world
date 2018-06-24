@@ -1,8 +1,8 @@
-python ?= python
+python ?= python3
 virtualenv_dir := pyenv
 pip := $(virtualenv_dir)/bin/pip
 
 
 $(virtualenv_dir): requirements.txt
-	virtualenv $@ -p $(python)
+	$(python) -m venv $@
 	$(pip) install -r $^

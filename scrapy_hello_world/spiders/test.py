@@ -2,8 +2,8 @@ import scrapy
 
 
 class TestSpider(scrapy.Spider):
-    name = 'test'
-    start_urls = [ 'https://icanhazip.com' ]
+    name = 'myip'
+    start_urls = [ 'https://httpbin.org/ip' ]
 
     def parse(self, response):
-        print response.body
+        print(response.body)
